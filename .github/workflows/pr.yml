@@ -5,8 +5,9 @@ on:
     branches:
       - main
     paths:
-      - src/**
-      - static/**
+      - app/**
+      - assets/**
+      - components/**
 
 jobs:
   # textme:
