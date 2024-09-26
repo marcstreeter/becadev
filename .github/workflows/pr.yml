@@ -1,0 +1,56 @@
+name: WEBSITE BUILD
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - static/**
+
+jobs:
+  # textme:
+  #   runs-on: ubuntu-latest
+  #   needs: build
+  #   steps:
+  #     - name: Sending Notification
+  #       uses: twilio-labs/actions-sms@v1
+  #       with:
+  #         fromPhoneNumber: ${{ secrets.TWILIO_TELEPHONE_NUMBER }}
+  #         toPhoneNumber: ${{ secrets.SMS_TELEPHONE_NUMBER }}
+  #         message: "${{ github.event.pull_request.user.login }} pushed moar code"
+  #       env:
+  #         TWILIO_ACCOUNT_SID: ${{ secrets.TWILIO_ACCOUNT_SID }}
+  #         TWILIO_API_KEY: ${{ secrets.TWILIO_API_SID }}
+  #         TWILIO_API_SECRET: ${{ secrets.TWILIO_API_SECRET }}
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling down repo
+        uses: actions/checkout@v4
+      - name: establishing node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: install javascript dependencies
+        run: npm install
+      - name: cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: build site
+        run: npm run build
+      - name: remove previous branch
+        uses: marcstreeter/github-actions/branch-delete@v6
+        with:
+          branch: pages
+      - name: publish site
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Action build
+          file_pattern: docs/**
+          branch: pages
+          create_branch: true
