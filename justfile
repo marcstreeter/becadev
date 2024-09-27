@@ -1,15 +1,15 @@
 # inspired by yeets-api's justfile
-install:
-  npm install
+_install:
+   @npm install
 
-dev:
+# runs development server locally
+dev: _install
   npm run dev
 
 # populates all files in deploy folder (mainly used for local dev)
-deploy:
+deploy: _install
   npm run build
 
 # removes all files from deploy folder (mainly used for local dev)
 undeploy:
   find ./docs -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
-  
