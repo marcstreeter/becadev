@@ -8,7 +8,7 @@ export const metadata = {
 export default function AwesomePage() {
     return (
         <main>
-            <h1>NextJS is Awesome - but we are so much more awesome. Oh so much more awesome! But FO&apos; REAL!!</h1>
+            <h1>NextJS is Awesome - but it could be better!</h1>
             <Box author="Marc" body="He's a developer" />
             <Box author="Dalinda" body="She's a developer" />
         </main>
