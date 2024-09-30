@@ -8,7 +8,7 @@ import type { NextRequest } from 'next/server'
 export function middleware(req: NextRequest): NextResponse | null {
     if (req.nextUrl.href.includes('/media/_next/')){
         return NextResponse.rewrite(
-            req.nextUrl.href.replace('/media/_next/', '/media/'),
+            req.nextUrl.href.replace('/media/_next/', '/waffle/'),
         );
     }
     return null;
