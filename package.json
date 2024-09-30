@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "cp CNAME docs/",
+    "postbuild": "cp COPY_CNAME docs/CNAME && cp COPY_NOJEKYLL docs/.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },
