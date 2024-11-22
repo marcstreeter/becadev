@@ -1,5 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Slider from "@/components/Slider"
+import SliderLabel from "@/components/SliderLabel"
+import { useSlider } from "@/stores/store"
+const count = useSlider.getState().seconds;
 ---
 
 <Layout title="Ruth's stuff" description="Just seeing what this does">
@@ -12,5 +16,7 @@ import Layout from "../layouts/Layout.astro";
         <p>This is just checking what this does</p>
         <footer>Yeah I am done.</footer>
     </article>
+    <SliderLabel client:only />
+    <Slider client:only />
   </div>
 </Layout> 
