@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import * as PIXI from 'pixi.js';
-import { BOARD_PIXEL_SIZE, BOARD_SIZE, CELL_SIZE, LINE_THICKNESS } from './drawing';
+import { BOARD_PIXEL_SIZE, BOARD_SIZE, CELL_SIZE, LINE_THICKNESS, drawMark, drawMarks } from './drawing';
 import { drawGrid } from './drawing';
 
 export function usePixiTicTacToe(
@@ -53,7 +53,7 @@ export function usePixiTicTacToe(
       app.stage.addChild(marksLayer);
 
       // Initial draw of marks
-      drawMarks(board, marksLayer);
+      drawMarks(marksLayer, board, winner, winningCells);
 
       app.canvas.addEventListener('dblclick', handleDblClick as any);
     })();
@@ -92,64 +92,12 @@ export function usePixiTicTacToe(
   useEffect(() => {
     const marksLayer = marksLayerRef.current;
     if (!marksLayer) return;
-    // Just draw new marks for all non-empty cells (no overlays, no removal)
-    for (let y = 0; y < BOARD_SIZE; y++) {
-      for (let x = 0; x < BOARD_SIZE; x++) {
-        const mark = board[y][x];
-        if (mark) {
-          let color = mark === 'X' ? 0x1976d2 : 0xd32f2f;
-          let g = new PIXI.Graphics();
-          if (mark === 'X') {
-            g.setStrokeStyle({ width: 8, color });
-            g.moveTo(x * CELL_SIZE + 20, y * CELL_SIZE + 20)
-              .lineTo((x + 1) * CELL_SIZE - 20, (y + 1) * CELL_SIZE - 20)
-              .stroke();
-            g.moveTo((x + 1) * CELL_SIZE - 20, y * CELL_SIZE + 20)
-              .lineTo(x * CELL_SIZE + 20, (y + 1) * CELL_SIZE - 20)
-              .stroke();
-          } else if (mark === 'O') {
-            g.setStrokeStyle({ width: 8, color });
-            g.circle(
-              x * CELL_SIZE + CELL_SIZE / 2,
-              y * CELL_SIZE + CELL_SIZE / 2,
-              CELL_SIZE / 2 - 20
-            ).stroke();
-          }
-          marksLayer.addChild(g);
-        }
-      }
-    }
+    // Clear previous marks
+    marksLayer.removeChildren();
+    // Use shared drawMarks function
+    drawMarks(marksLayer, board, winner, winningCells);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [board]);
-
-  function drawMarks(board: string[][], marksLayer: PIXI.Container) {
-    for (let y = 0; y < BOARD_SIZE; y++) {
-      for (let x = 0; x < BOARD_SIZE; x++) {
-        const mark = board[y][x];
-        if (mark) {
-          let color = mark === 'X' ? 0x1976d2 : 0xd32f2f;
-          let g = new PIXI.Graphics();
-          if (mark === 'X') {
-            g.setStrokeStyle({ width: 8, color });
-            g.moveTo(x * CELL_SIZE + 20, y * CELL_SIZE + 20)
-              .lineTo((x + 1) * CELL_SIZE - 20, (y + 1) * CELL_SIZE - 20)
-              .stroke();
-            g.moveTo((x + 1) * CELL_SIZE - 20, y * CELL_SIZE + 20)
-              .lineTo(x * CELL_SIZE + 20, (y + 1) * CELL_SIZE - 20)
-              .stroke();
-          } else if (mark === 'O') {
-            g.setStrokeStyle({ width: 8, color });
-            g.circle(
-              x * CELL_SIZE + CELL_SIZE / 2,
-              y * CELL_SIZE + CELL_SIZE / 2,
-              CELL_SIZE / 2 - 20
-            ).stroke();
-          }
-          marksLayer.addChild(g);
-        }
-      }
-    }
-  }
+  }, [board, winner, winningCells]);
 
   return containerRef;
 } 

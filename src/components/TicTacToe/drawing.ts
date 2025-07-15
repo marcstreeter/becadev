@@ -28,26 +28,30 @@ export function drawMarks(stage: PIXI.Container, board: string[][], winner: stri
       if (winner && !winningCells.some(([wy, wx]) => wy === y && wx === x)) {
         color = 0x888888;
       }
-      if (mark === 'X') {
-        const xMark = new PIXI.Graphics();
-        xMark.setStrokeStyle({ width: 8, color });
-        xMark.moveTo(x * CELL_SIZE + 20, y * CELL_SIZE + 20)
-          .lineTo((x + 1) * CELL_SIZE - 20, (y + 1) * CELL_SIZE - 20)
-          .stroke();
-        xMark.moveTo((x + 1) * CELL_SIZE - 20, y * CELL_SIZE + 20)
-          .lineTo(x * CELL_SIZE + 20, (y + 1) * CELL_SIZE - 20)
-          .stroke();
-        stage.addChild(xMark);
-      } else if (mark === 'O') {
-        const oMark = new PIXI.Graphics();
-        oMark.setStrokeStyle({ width: 8, color });
-        oMark.circle(
-          x * CELL_SIZE + CELL_SIZE / 2,
-          y * CELL_SIZE + CELL_SIZE / 2,
-          CELL_SIZE / 2 - 20
-        ).stroke();
-        stage.addChild(oMark);
-      }
+      drawMark(mark, x, y, stage, color);
     }
   }
+}
+
+export function drawMark(mark: string, x: number, y: number, marksLayer: PIXI.Container, color?: number) {
+  if (!mark) return;
+  let finalColor = color !== undefined ? color : (mark === 'X' ? 0x1976d2 : 0xd32f2f);
+  let g = new PIXI.Graphics();
+  if (mark === 'X') {
+    g.setStrokeStyle({ width: 8, color: finalColor });
+    g.moveTo(x * CELL_SIZE + 20, y * CELL_SIZE + 20)
+      .lineTo((x + 1) * CELL_SIZE - 20, (y + 1) * CELL_SIZE - 20)
+      .stroke();
+    g.moveTo((x + 1) * CELL_SIZE - 20, y * CELL_SIZE + 20)
+      .lineTo(x * CELL_SIZE + 20, (y + 1) * CELL_SIZE - 20)
+      .stroke();
+  } else if (mark === 'O') {
+    g.setStrokeStyle({ width: 8, color: finalColor });
+    g.circle(
+      x * CELL_SIZE + CELL_SIZE / 2,
+      y * CELL_SIZE + CELL_SIZE / 2,
+      CELL_SIZE / 2 - 20
+    ).stroke();
+  }
+  marksLayer.addChild(g);
 } 
