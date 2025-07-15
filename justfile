@@ -9,3 +9,7 @@ dev: _install
 # populates all files in deploy folder (mainly used for local dev)
 deploy: _install
   npm run build
+
+# runs tests using npm
+test: _install
+  npm test
