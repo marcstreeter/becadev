@@ -21,6 +21,12 @@ vi.mock('pixi.js', () => {
       addChild() { return this; }
       removeChild() { return this; }
     },
+    // Add this mock for Container:
+    Container: class {
+      addChild() {}
+      removeChild() {}
+      removeChildren() {}
+    },
     // Add any other mocks if needed
   };
 });
