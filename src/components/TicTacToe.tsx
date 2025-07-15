@@ -162,6 +162,7 @@ const TicTacToe: React.FC = () => {
         node.appendChild(app.canvas);
         app.canvas.style.width = BOARD_PIXEL_SIZE + 'px';
         app.canvas.style.height = BOARD_PIXEL_SIZE + 'px';
+        app.canvas.style.border = '2px solid red'; // Add border to canvas
         drawBoard();
         // Double-click handler
         const onDblClick = (event: MouseEvent) => {
@@ -218,8 +219,7 @@ const TicTacToe: React.FC = () => {
         style={{
           margin: '0 auto',
           width: BOARD_PIXEL_SIZE,
-          height: BOARD_PIXEL_SIZE,
-          border: '2px solid red', // Debug border
+          height: BOARD_PIXEL_SIZE
         }}
       />
       <div style={{ marginTop: 16 }}>
