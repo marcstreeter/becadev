@@ -1,6 +1,6 @@
 import React from 'react';
 import { BOARD_SIZE } from './helpers';
-import { usePixiTicTacToe } from './pixiHooks';
+import { usePixiTicTacToe } from './pixi';
 import { useTicTacToeGame } from './tictactoeHooks';
 
 export default function TicTacToe() {

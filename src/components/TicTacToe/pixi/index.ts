@@ -1,0 +1,1 @@
+export { usePixiTicTacToe } from './pixiHooks';
