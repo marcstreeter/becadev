@@ -1,5 +1,6 @@
 import * as PIXI from 'pixi.js';
 import { BOARD_SIZE } from './helpers';
+export { BOARD_SIZE };
 
 export const CELL_SIZE = 100;
 export const LINE_THICKNESS = 12;
