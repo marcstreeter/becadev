@@ -10,7 +10,7 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 ## PROFESSIONAL EXPERIENCE
 
 #### Full Stack Senior Software Engineer, BrainGu
-#### San Antonio, TX (Remote) October ’24 - July ’25
+#### San Antonio, TX (Remote) September ’24 - July ’25
 - Full stack contributor to multiple services impacting customer facing products. (Django/React/Typescript)
 - Mentored both new and seasoned members of the team. (Pair programming)
 - Actively participated in Agile ceremonies. (GitLab/Jira)
@@ -19,7 +19,7 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Lead implementation of real-time collaboration product features. (React/Python/Kubernetes)
 
 #### Lead Software Engineer, American Tire Distributors 
-#### San Antonio, TX (Remote) October ’21 - October ’24
+#### San Antonio, TX (Remote) October ’21 - September ’24
 - Re-architected inter-service behavior, unblocking it for increasingly larger workloads. (Event Driven/PubSub)
 - Led design and rollout of scalable centralized external data source ingestion service. (Kubernetes/PubSub/- FastAPI)
 - Led design and rollout of robust PCI compliance cleaning pipeline step. (GCP Cloud Functions/Kubernetes)
@@ -36,8 +36,8 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Developed POC for improved dashboard, reducing latency for data lake queries. (TanStack/IndexedDb/BigQuery)
 - Enhanced local development tooling, reducing review toil while increasing merge confidence. (Pre-commit)
 
-#### Backend Engineer, LinQuest Corporation
-#### Georgetown, TX (Remote) October ’20 - October ‘21
+#### Backend Engineer, The Perduco Group / LinQuest Corporation
+#### Georgetown, TX (Remote) November ’20 - September ‘21
 - Obtained and maintained United States Secret Security Clearance.
 - Co-lead team ceremonies and stakeholder question and answer presentations. (Jira/Agile/Scrum/Retrospectives)
 - Created vendor agnostic solutions, enabling on prem and cloud portability. (Kubernetes)
@@ -52,7 +52,7 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Served as AWS subject matter expert(SME), guiding developers and other teams’ usage of cloud infrastructure. - (AWS S3/EC2/EKS/Packer AMI creation)
 
 #### Senior Software Engineer, Foundries.io
-#### Georgetown, TX (Remote) November ’19 - August ‘20
+#### Georgetown, TX (Remote) November ’19 - July ‘20
 - Open source contributor to automation to CLI tools. (Golang/Docker/TUF/Uptane)
 - Added continuous integration log streaming. (Flask/JavaScript)
 - Added API throttling. (Lua/Redis/Python)
@@ -60,8 +60,9 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Contributed to customer statistics dashboard. (Google Cloud Platform)
 - Contributor to frontend components. (Marko.js/Sass-lang/Express)
 - Automated development workflow. (Black/Prettier/Husky/Pre-Commit)
-- Senior Software Engineer, Blackberry Cylance
-- Georgetown, TX September ’17 - November ‘19
+
+#### Senior Software Engineer, Blackberry/Cylance
+#### Georgetown, TX September ’17 - November ‘19
 - Full-stack contributor to containerized RESTful interface. (Docker/Asyncio/Python 3/Tornado/React)
 - Key contributor and architect to task system. (RabbitMQ/AWS Lambda)
 - Created centralized NoSQL based caching system, greatly improving application performance. (Redis/Lua/Python)
