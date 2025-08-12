@@ -212,3 +212,7 @@ Perfect scores across all metrics:
 ---
 
 Built with 🚀 Astro and 🎨 Shadcn/UI by [AgentC](https://agentc.app)
+
+# Resources
+
+- logo font comes from [Sacramento Font](https://www.fontspace.com/sacramento-font-f15421)
