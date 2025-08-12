@@ -17,7 +17,6 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Collaborated with team in program design and architecture discussions. (Lucid Chart)
 - Reduced cloud expenditure by improving local developer tooling, reducing feedback lag. (Tilt/Kustomize/BASH)
 - Lead implementation of real-time collaboration product features. (React/Python/Kubernetes)
-- Co-collaborator of LLM adoption and automation. (Python/Gemini/Ask Sage)
 
 #### Lead Software Engineer, American Tire Distributors 
 #### San Antonio, TX (Remote) October ’21 - October ’24
