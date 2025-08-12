@@ -38,7 +38,7 @@ import TicTacToe from './TicTacToe';
 describe('TicTacToe component', () => {
   it('renders the board and current player', () => {
     render(<TicTacToe />);
-    expect(screen.getByText(/Tic Tac Toe/i)).toBeInTheDocument();
+    expect(screen.getByText(/If you didn't enjoy the discussion, then you won't enjoy this either./i)).toBeInTheDocument();
     expect(screen.getByText(/Current Player:/i)).toBeInTheDocument();
   });
 }); 
