@@ -1,12 +1,6 @@
----
-layout: ../layouts/TextLayout.astro
-title: MIT License
-description: A permissive license that allows for free use, modification, and distribution
----
+MIT License
 
-# MIT License
-
-Copyright (c) 2024 Agent C https://agentc.app
+Copyright (c) 2025 Marc Streeter https://marcstreeter.dev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

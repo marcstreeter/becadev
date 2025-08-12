@@ -17,7 +17,7 @@ export default function TicTacToe() {
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h2>Tic Tac Toe (Pixi.js + React)</h2>
+      <h2>If you didn't enjoy the discussion, then you won't enjoy this either.</h2>
       <div
         ref={containerRef}
         style={{
