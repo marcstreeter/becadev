@@ -4,7 +4,7 @@ title: And now for something completely different.
 description: A quick introduction to the author's professional life.
 ---
 
-# Summary
+# Summary[(linkedin)](https://www.linkedin.com/in/marc-streeter/) [(github)](https://github.com/marcstreeter)
 Resourceful Senior Software Engineer with more than 10 years of experience in full-stack development and cloud architecture. Proven expertise in optimizing ETL pipelines and implementing Kubernetes solutions, leading teams to enhance operational efficiency. Successfully mentored junior developers and contributed to open-source projects, demonstrating strong leadership and collaboration skills. Certified Kubernetes Application Developer, dedicated to driving innovation and excellence in software engineering.
 
 ## PROFESSIONAL EXPERIENCE

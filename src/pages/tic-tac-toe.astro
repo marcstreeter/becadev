@@ -1,7 +1,8 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import TicTacToe from '../components/TicTacToe';
 ---
  
-<main style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+<Layout title="Marc Streeter Dev: Commiserate with me, and never cry alone.">
   <TicTacToe client:only="react" />
-</main> 
+</Layout> 
