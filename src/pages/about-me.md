@@ -88,12 +88,11 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Served as a mediator between clients and software engineers, communicating of defects/solutions.
 
 ## EDUCATION
-- University of Texas at Arlington — Bachelors of Science in Computer Science ‘12
+- University of Texas at Arlington — Bachelors of Science in Computer Science (ABET Accredited)
 
 ## CERTIFICATIONS
 - Linux Foundation Certified Kubernetes Application Developer • December ’22
 - AWS Certified Solutions Architect • July ’17
-- ABET Accredited • December ’12
 
 ## VOLUNTEERING
 - Technology Leader and Developer San Antonio Nerd Fest + Expo10/2024 - 2/2025 San Antonio, TX
