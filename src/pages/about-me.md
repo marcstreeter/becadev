@@ -82,11 +82,6 @@ Resourceful Senior Software Engineer with more than 10 years of experience in fu
 - Communicated with team in person and online. (Jira/Gitlab/Slack/travelling)
 - Aided in screening and new hire process by reviewing resumes and interviewing of multiple candidates.
 
-#### Software Analyst, Cerner
-#### Kansas City, MO September ’13 - March ‘14
-- Provided initial quality control mechanisms used to solve outstanding errors present in their flagship - Millennium software product. (In house Oracle-like SQL)
-- Served as a mediator between clients and software engineers, communicating of defects/solutions.
-
 ## EDUCATION
 - University of Texas at Arlington — Bachelors of Science in Computer Science (ABET Accredited)
 
